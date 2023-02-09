@@ -11,17 +11,17 @@
         .field
           %label Username
           .ui.left.icon.input
-            = f.text_field :username, :placeholder => "Username"
+            = f.text_field :username, :placeholder => "Username", autocomplete: "off"
             %i.user.icon
         .field
           %label Password
           .ui.left.icon.input
-            = f.text_field :password_digest, :placeholder => "Password"
+            = f.password_field :password_digest, :placeholder => "Password", autocomplete: "off"
             %i.lock.icon
         = f.button "Login", class: "ui orange submit button"
     .middle.aligned.column
       .ui.big.orange.button
         %i.signup.icon
-        Sign Up
+        = link_to "Sign Up", sign_up_path, class: "item"
   .ui.vertical.divider
     Or

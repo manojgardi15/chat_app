@@ -12,7 +12,7 @@
         = form_for(@message, html: {class: "ui reply form", role: "form"}, url: message_path, remote: true) do |f|
           .field
             .ui.fluid.icon.input
-              = f.text_field :body
+              = f.text_field :body, autocomplete: "off"
               = f.button '<i class="bordered inverted orange arrow up icon"></i>'.html_safe
 
   .four.wide.column
